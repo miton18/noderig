@@ -6,3 +6,5 @@ import:
 - package: github.com/spf13/viper
 - package: github.com/shirou/gopsutil
   version: ^2.16.12
+  subpackages:
+  - process

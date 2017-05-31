@@ -1,8 +1,12 @@
-hash: 90ae868bbe36b77e6ec6be99acf815c6dfa3152b862ef81a4b4ab5ea0adda831
-updated: 2017-01-17T11:55:55.249155088-05:00
+hash: aef4d56d03c4c61fae7c5117faa5919a69e0831b9a0aa5d82348559ab772a9f3
+updated: 2017-05-01T22:35:35.1846093+02:00
 imports:
 - name: github.com/fsnotify/fsnotify
   version: fd9ec7deca8bf46ecd2a795baaacf2b3a9be1197
+- name: github.com/go-ole/go-ole
+  version: de8695c8edbf8236f30d6e1376e20b198a028d42
+  subpackages:
+  - oleutil
 - name: github.com/hashicorp/hcl
   version: 37ab263305aaeb501a60eb16863e808d426e37f2
   subpackages:
@@ -25,9 +29,20 @@ imports:
 - name: github.com/pelletier/go-toml
   version: ce7be745f09fe4ff89af8e3ea744e1deabf20ee3
 - name: github.com/shirou/gopsutil
-  version: aa5843400ec86e2ed6969e9d172e5719c08d56bf
+  version: 9af92986dda65a8c367157a82b484553e1ec1c55
+  subpackages:
+  - cpu
+  - disk
+  - host
+  - internal/common
+  - load
+  - mem
+  - net
+  - process
+- name: github.com/shirou/w32
+  version: bb4de0191aa41b5507caa14b0650cdbddcd9280b
 - name: github.com/Sirupsen/logrus
-  version: d26492970760ca5d33129d2d799e34be5c4782eb
+  version: ba1b36c82c5e05c4f912a88eab0dcd91a171688f
 - name: github.com/spf13/afero
   version: 2f30b2a92c0e5700bcfe4715891adb1f2a7a406d
   subpackages:
@@ -42,6 +57,8 @@ imports:
   version: 5ccb023bc27df288a957c5e994cd44fd19619465
 - name: github.com/spf13/viper
   version: 5ed0fc31f7f453625df314d8e66b9791e8d13003
+- name: github.com/StackExchange/wmi
+  version: ea383cf3ba6ec950874b8486cd72356d007c768f
 - name: golang.org/x/sys
   version: 478fcf54317e52ab69f40bb4c7a1520288d7f7ea
   subpackages:

@@ -31,6 +31,7 @@ func init() {
 	RootCmd.Flags().Uint8("mem", 1, "memory metrics level")
 	RootCmd.Flags().Uint8("disk", 1, "disk metrics level")
 	RootCmd.Flags().Uint8("net", 1, "network metrics level")
+	RootCmd.Flags().Uint8("process", 0, "network metrics level")
 	RootCmd.Flags().Uint64("period", 1000, "default collection period")
 	RootCmd.Flags().StringP("collectors", "c", "./collectors", "external collectors directory")
 	RootCmd.Flags().Uint64P("keep-for", "k", 3, "keep collectors data for the given number of fetch")
@@ -99,6 +100,9 @@ var RootCmd = &cobra.Command{
 		cs = append(cs, net)
 
 		disk := collectors.NewDisk(uint(viper.GetInt("period")), uint8(viper.GetInt("disk")))
+		cs = append(cs, disk)
+
+		process := collectors.NewProcess(uint(viper.GetInt("period")), uint8(viper.GetInt("process")))
 		cs = append(cs, disk)
 
 		// Load external collectors
